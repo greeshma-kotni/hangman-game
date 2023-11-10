@@ -71,7 +71,8 @@ class Hangman extends Component {
 
     return (
       <div className="Hangman">
-        <h2>Hangman</h2>
+        <h1>Hangman Showdown </h1>
+        <h2>Guess and Win!</h2>
         <img src={this.props.images[this.state.noOfWrong]} alt="HangMan" />
         <p>
           Guesses Left: {this.props.maxWrong - this.state.noOfWrong} /{" "}
@@ -83,9 +84,10 @@ class Hangman extends Component {
         </p>
         <p className="Hangman-btns">{gameState}</p>
         {restart && (
-          <button id="reset" onClick={this.reset}>
-            Restart?
-          </button>
+          <div className="reset-wrapper">
+          <button id="reset" onClick={this.reset}>Restart?</button>
+          
+          </div>
         )}
       </div>
     );
